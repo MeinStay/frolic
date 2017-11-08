@@ -1,0 +1,59 @@
+<section class="wrapper">
+    <section class="col-md-6 col-md-offset-3">
+        <h3 class="text-center mb-20">Add Items</h3>
+        <hr>
+        <div class="panel panel-default form-panel">
+            <div class="panel-body">
+                <div class="alert alert-success alert-dismissable fade in" ng-if="createCtrl.responseCode=='0000'">
+                    <i class="close fa fa-times" data-dismiss="alert" aria-label="close"></i>
+                    <p>{{createCtrl.responseMessage}}</p>
+                </div>
+                <div class="alert alert-warning alert-dismissable fade in" ng-if="editCtrl.responseCode=='7867'">
+                    <i class="close fa fa-times" data-dismiss="alert" aria-label="close"></i>
+                    <p>{{editCtrl.responseMessage}}. Please try again.</p>
+                </div>
+                <div class="alert alert-danger alert-dismissable fade in" ng-if="createCtrl.responseCode=='7864'">
+                    <i class="close fa fa-times" data-dismiss="alert" aria-label="close"></i>
+                    <p>{{createCtrl.responseMessage}}. Please try again.</p>
+                </div>
+                <form enctype="multipart/form-data" name="createForm" ng-submit="createCtrl.createItem(item,createForm.$valid)" novalidate>
+                    <div class="form-group">
+                        <select class="form-control" placeholder="select" required ng-model="item.category" name="category">
+                            <option value="" disabled selected>Select Category</option>
+                            <option ng-repeat="category in createCtrl.categories">{{category.name}}</option>
+                        </select>
+                        <p ng-show="createForm.category.$touched && createForm.category.$error.required" class="error-message">Category is required.</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="name" ng-model="item.name" required autocomplete="off" class="form-control" placeholder="Item Name">
+                        <p ng-show="createForm.name.$touched && createForm.name.$error.required" class="error-message">Item name is required.</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="shortdesc" ng-model="item.shortdesc" required autocomplete="off" class="form-control" placeholder="Short Description">
+                        <p ng-show="createForm.shortdesc.$touched && createForm.shortdesc.$error.required" class="error-message">Short description is required.</p>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="longdesc" ng-model="item.longdesc" required placeholder="Long Description"></textarea>
+                        <p ng-show="createForm.longdesc.$touched && createForm.longdesc.$error.required" class="error-message">Long description is required.</p>
+                    </div>
+                    <div class="form-group">
+                        <p ng-if="createCtrl.uploadPicResponseCode=='0000'">{{createCtrl.uploadPicResponse}}</p>
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-9 col-xs-12">
+                                <input type="file" class="form-control" name="file" ngf-select ng-model="picfile">
+                            </div>
+                            <div class="col-md-3 col-xs-12">
+                                <button type="button" class="btn btn-success btn-block" ng-click="createCtrl.uploadPic(picfile)">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" ng-disabled="createForm.$invalid" class="btn btn-success btn-block">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</section>

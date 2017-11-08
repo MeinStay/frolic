@@ -1,0 +1,14 @@
+<aside class="col-md-3 side-bar col-sm-4 col-xs-12 sidebar-menu" ng-if="showSidebar">
+    <p class="filter-section">
+        <h5 class="pad-10 category-heading">
+            <i class="fa fa-times pull-right visible-xs" ng-click="homePageCtrl.checkScreenWidth()"></i> Categories
+        </h5>
+        <div class="row">
+            <hr class="separator">
+        </div>
+        <p class="no-categories" ng-if="homePageCtrl.categories.length <= 0">Error occurred. No categories are loaded.</p>
+        <ul class="nav categories">
+            <li ng-repeat="category in homePageCtrl.categories" ng-click="homePageCtrl.getItemsByCategory(category.id,$index)" ng-class="{'active':$index == homePageCtrl.selected}">{{category.name}}</li>
+        </ul>
+        </div>
+</aside>

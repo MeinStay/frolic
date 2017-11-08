@@ -1,0 +1,44 @@
+<section class="log-reg-wrapper">
+    <section class="col-md-6 col-xs-12 col-sm-12">
+        <div class="jumbotron">
+            <h1>Short &amp; Simple Registration.</h1>
+        </div>
+    </section>
+    <section class="col-md-6 col-xs-12 col-sm-12">
+        <div class="panel panel-default login-panel">
+            <div class="panel-body">
+                <div class="alert alert-success alert-dismissable fade in" ng-if="registerCtrl.responseCode=='0000'">
+                    <i class="close fa fa-times" data-dismiss="alert" aria-label="close"></i>
+                    <p>{{registerCtrl.responseMessage}}. Proceed to <a href="#!/login">login.</a></p>
+                </div>
+                <div class="alert alert-warning alert-dismissable fade in" ng-if="registerCtrl.responseCode=='7866'">
+                    <i class="close fa fa-times" data-dismiss="alert" aria-label="close"></i>
+                    <p>{{registerCtrl.responseMessage}}. Either you can proceed with <a href="#!/login">login</a> or try some other username.</p>
+                </div>
+                <div class="alert alert-danger alert-dismissable fade in" ng-if="registerCtrl.responseCode=='7864'">
+                    <i class="close fa fa-times" data-dismiss="alert" aria-label="close"></i>
+                    <p>{{registerCtrl.responseMessage}}. Please try again.</p>
+                </div>
+                <form name="registerForm" ng-submit="registerCtrl.registerUser(user,registerForm.$valid)" novalidate>
+                    <div class="form-group">
+                        <input type="text" name="fullname" required autocomplete="off" class="form-control" placeholder="Your name" ng-model="user.name">
+                        <p ng-show="registerForm.fullname.$touched && registerForm.fullname.$error.required" class="error-message">Name is required.</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="username" required autocomplete="off" class="form-control" placeholder="Email Address" ng-model="user.email">
+                        <p ng-show="registerForm.username.$touched && registerForm.username.$error.required" class="error-message">Email is required.</p>
+                        <p ng-show="registerForm.username.$touched && registerForm.username.$error.email" class="error-message">Email is invalid.</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" required minlength="8" name="password" class="form-control" placeholder="Password" ng-model="user.password">
+                        <p ng-show="registerForm.password.$touched && registerForm.password.$error.required" class="error-message">Password is required.</p>
+                        <p ng-show="registerForm.password.$touched && registerForm.password.$error.minlength" class="error-message">Password length should be atleast 8 characters</p>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" ng-disabled="registerForm.$invalid" class="btn btn-success btn-block">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</section>

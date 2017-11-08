@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html ng-app="frolicApp" ng-strict-di>
+
+<head>
+    <title>Frolic - Welcome</title>
+    <!-- Meta data -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="google-signin-client_id" content="1084830083919-heeutdk18akj5r4rcmrls77aka5o4jbb.apps.googleusercontent.com">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">-->
+    <!-- Google Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+
+</head>
+
+<body>
+
+    <header-directive show-sidebar="showSidebar" show-category-link="showCategoryLink"></header-directive>
+    <article class="container">
+        <div ui-view class="main-view"></div>
+    </article>
+
+    <script src="vendor.js"></script>
+    <script src="bundle.js"></script>
+
+
+</html>

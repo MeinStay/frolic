@@ -1,0 +1,49 @@
+<section class="log-reg-wrapper">
+    <section class="col-md-6 col-xs-12 col-sm-12">
+        <div class="jumbotron">
+            <h1>Here you go. Login.</h1>
+        </div>
+    </section>
+    <section class="col-md-6 col-sm-12 col-xs-12">
+        <div class="panel panel-default login-panel">
+            <div class="panel-body">
+                <div class="alert alert-warning alert-dismissable fade in" ng-if="loginCtrl.responseCode=='7862'">
+                    <i class="close fa fa-times" data-dismiss="alert" aria-label="close"></i>
+                    <p>{{loginCtrl.responseMessage}}. Please enter correct username.</p>
+                </div>
+                <div class="alert alert-danger alert-dismissable fade in" ng-if="loginCtrl.responseCode=='7863'">
+                    <i class="close fa fa-times" data-dismiss="alert" aria-label="close"></i>
+                    <p>{{loginCtrl.responseMessage}}. Please try again.</p>
+                </div>
+                <form name="loginForm" ng-submit="loginCtrl.loginUser(user,loginForm.$valid)" novalidate>
+                    <div class="form-group">
+                        <input name="username" type="email" required class="form-control" placeholder="Email Address" autocomplete="off" ng-model="user.email">
+                        <p ng-show="loginForm.username.$touched && loginForm.username.$error.required" class="error-message">Email is required.</p>
+                        <p ng-show="loginForm.username.$touched && loginForm.username.$error.email" class="error-message">Email is invalid.</p>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" name="password" required minlength="8" class="form-control" placeholder="Password" ng-model="user.password">
+                        <p ng-show="loginForm.password.$touched && loginForm.password.$error.required" class="error-message">Password is required.</p>
+                        <p ng-show="loginForm.password.$touched && loginForm.password.$error.minlength" class="error-message">Password length should be atleast 8 characters</p>
+                    </div>
+                    <div class="form-group">
+                        <div id="google-signin-button" ng-click="loginCtrl.signIn()"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-9 col-xs-12">
+                            <div class="form-group text-xs-center">
+                                <span class="mr-5">New Users Please</span><a href="#!/register" class="link-text">Register</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-xs-12">
+                            <div class="form-group">
+                                <button type="submit" ng-disabled="loginForm.$invalid || loginCtrl.isDisabled" class="btn btn-success btn-block">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</section>
+</section>

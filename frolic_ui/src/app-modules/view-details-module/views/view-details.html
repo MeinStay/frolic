@@ -1,0 +1,26 @@
+<section class="wrapper">
+    <section class="col-md-12 pad-60">
+        <div class="item-heading">
+            <h2 class="border-bottom mb-20 pad-10">{{viewCtrl.itemDetails.title}}
+                <a href="#!/delete_item?q={{viewCtrl.itemDetails.id}}" ng-click="">
+                    <span class="pull-right control-icons">
+                        <i class="fa fa-trash"></i>
+                    </span>
+                </a>
+                <a href="#!/edit_item?q={{viewCtrl.itemDetails.id}}">
+                    <span class="pull-right mr-10 control-icons">
+                        <i class="fa fa-edit"></i>
+                    </span>
+                </a>
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-xs-12 mb-20">
+                <img ng-src="{{viewCtrl.imageUrl}}/{{viewCtrl.itemDetails.item_photo}}" class="item-photo">
+            </div>
+            <div class="col-md-9 col-xs-12">
+                <p class="info">{{viewCtrl.itemDetails.long_description}}</p>
+            </div>
+        </div>
+    </section>
+</section>

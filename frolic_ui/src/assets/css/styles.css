@@ -1,0 +1,473 @@
+/*Start of Common CSS*/
+
+html,
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Droid Sans', sans-serif;
+    background: #eee;
+}
+
+.error-message {
+    color: #E52B39;
+    margin-top: 10px;
+}
+
+select.form-control {
+    height: 40px;
+}
+
+.form-control {
+    font-size: 15px;
+}
+
+.alert-dismissable .close {
+    top: 2px;
+    right: 0px;
+}
+
+.item-photo {
+    width: 100%;
+}
+
+.empty-container {
+    padding: 30px;
+    text-align: center;
+}
+
+.empty-container p {
+    color: #777;
+    font-size: 20px;
+}
+
+.no-results {
+    font-size: 141px;
+    margin-bottom: 30px;
+    color: #777;
+}
+
+.no-categories {
+    color: #777;
+    text-align: center;
+}
+
+.alert {
+    padding: 10px;
+}
+
+.border-right {
+    border-right: 1px solid #ddd;
+}
+
+.mr-5 {
+    margin-right: 5px;
+}
+
+.mr-10 {
+    margin-right: 10px;
+}
+
+.pr-0 {
+    padding-right: 0;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-50 {
+    margin-top: 50px
+}
+
+.vertical-line {
+    border-left: 1px solid #ddd;
+    margin-left: 5px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #ddd;
+}
+
+.border-top {
+    border-top: 1px solid #ddd;
+}
+
+.link-text {
+    font-weight: bold;
+    color: #176794;
+}
+
+.link-text:hover {
+    color: #176794;
+}
+
+.pad-10 {
+    padding: 0px 0px 10px 0px;
+}
+
+.pad-60 {
+    padding: 0px 60px;
+}
+
+.wrapper,
+.log-reg-wrapper {
+    background: #fff;
+    min-height: 100vh;
+}
+
+.wrapper {
+    padding-top: 20px;
+}
+
+.log-reg-wrapper {
+    padding-top: 80px;
+}
+
+.pad-20 {
+    padding: 20px 0px 0px 0px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+
+/*End of Common CSS*/
+
+
+/*Start of header section CSS*/
+
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0;
+    height: 30px;
+    border: none;
+    background: #176794;
+}
+
+.navbar a.navbar-brand {
+    font-weight: bold;
+    color: #fff;
+    font-size: 22px;
+    padding: 4px 15px;
+    height: auto;
+    border-right: 1px solid #fff;
+    margin: 10px 0px;
+}
+
+.navbar a.navbar-brand:hover,
+.navbar a.navbar-brand:focus {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #fff;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background: #fff;
+}
+
+.navbar-right>li>a:last-child {
+    padding-right: 0px;
+}
+
+.sub-heading {
+    position: relative;
+    top: 15px;
+    left: 14px;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+/*End of header section CSS*/
+
+
+/*Start of sidebar section CSS*/
+
+.side-bar {
+    height: 100vh;
+    background: #fff;
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    margin-top: 20px;
+}
+
+hr {
+    margin-top: 0px;
+    border-top: 1px solid #ddd;
+}
+
+.category-heading {
+    margin: 20px 0px 10px 0px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.categories li {
+    padding: 0px 0px 20px 0px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+}
+
+.categories li:hover {
+    color: #000;
+}
+
+.categories li.active {
+    color: #176794;
+    font-weight: bold;
+}
+
+.sidebar-menu {
+    padding: 0px 35px;
+}
+
+
+/*End of sidebar section CSS*/
+
+
+/*Start of catalogue section CSS*/
+
+.view-items-heading {
+    margin: 7px 0px 0px 0px;
+    font-weight: bold;
+}
+
+.btn-warning,
+.btn-warning:hover {
+    background: #176794;
+}
+
+.panel-default {
+    background: #fff;
+    box-shadow: 5px 5px 25px 0px rgba(46, 61, 73, 0.2);
+    overflow: hidden;
+    border: none;
+    border-radius: 0;
+}
+
+.items-menu {
+    padding: 15px 20px;
+}
+
+.items-panel {
+    padding: 30px 10px 0px 10px;
+}
+
+.item-card a {
+    color: #145c85;
+}
+
+.item-card img {
+    margin-bottom: 10px;
+    width: 100%;
+    height: 160px;
+}
+
+.item-card a:hover,
+.item-card a:focus {
+    text-decoration: none;
+}
+
+.item-name {
+    font-weight: bold;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.description {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 0px;
+    color: #666;
+}
+
+
+/*Start of Login and registration CSS*/
+
+.jumbotron {
+    background: transparent;
+}
+
+.login-panel {
+    padding: 30px 30px 0px 30px;
+    box-shadow: none;
+}
+.abcRioButton {
+    width: 50% !important;
+    border-radius: 3px !important;
+}
+input.form-control {
+    height: 45px;
+}
+
+textarea.form-control {
+    height: 120px !important;
+}
+
+.login-panel .form-group {
+    margin-bottom: 30px;
+}
+
+
+/*End of Login CSS*/
+
+
+/*Start of Other forms CSS*/
+
+.form-panel {
+    padding: 0px 30px 30px 30px;
+    box-shadow: none;
+}
+
+
+/*End of Other forms CSS*/
+
+
+/*Start of Details Page CSS*/
+
+.control-icons {
+    font-size: 22px;
+    color: #777;
+    line-height: 44px;
+}
+
+.info {
+    font-size: 16px;
+    line-height: 32px;
+    color: #777;
+    text-align: justify;
+}
+
+
+/*End of Details Page CSS*/
+
+
+/*Start of Delete Page CSS*/
+
+.del-panel .form-group:after {
+    display: table;
+    clear: both;
+    content: "";
+}
+
+.del-content {
+    min-height: 100px;
+    padding: 40px 0px;
+}
+
+.del-content p {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+/*End of Delete Page CSS*/
+
+
+/*Start of Smaller Devices CSS*/
+
+@media only screen and (min-device-width:320px) and (max-device-width:749px) {
+    .items-menu {
+        margin-top: 70px;
+    }
+    .cut-margin {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    .wrapper,
+    .log-reg-wrapper {
+        padding-top: 20px;
+    }
+    .pr-0 {
+        padding-right: 15px;
+    }
+    .pad-60 {
+        padding: 0px 20px;
+    }
+    .sub-heading {
+        top: 13px;
+        font-size: 12px;
+    }
+    .navbar a.navbar-brand {
+        font-size: 16px;
+    }
+    .mt-20 {
+        margin-top: 0px;
+    }
+    .main-view {
+        margin-top: 50px;
+    }
+    .side-bar {
+        position: fixed;
+        bottom: 0px;
+        z-index: 1;
+        width: 70%;
+        top: 50px;
+        left: -70%;
+        margin-top: 0px;
+    }
+    .side-bar {
+        -webkit-animation: slide 0.5s forwards;
+        -webkit-animation-delay: 0.2s;
+        animation: slide 0.5s forwards;
+        animation-delay: 0.2s;
+    }
+    @-webkit-keyframes slide {
+        100% {
+            left: 0;
+        }
+    }
+    @keyframes slide {
+        100% {
+            left: 0;
+        }
+    }
+    .navbar {
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+        top: 0;
+    }
+    .login-panel,
+    .form-panel {
+        padding: 0px;
+    }
+    .navbar-collapse {
+        background: #176794;
+    }
+    .jumbotron {
+        text-align: center;
+        padding: 0;
+    }
+    .text-xs-center {
+        text-align: center;
+    }
+}
+
+
+/*End of Smaller Devices CSS*/

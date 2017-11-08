@@ -1,0 +1,32 @@
+<header>
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>         
+                    </button>
+                <a class="navbar-brand" href="/">
+                    <i class="fa fa-trophy" aria-hidden="true"></i>
+                    <span>Frolic</span>
+                </a>
+                <span class="sub-heading">A sports item catalogue</span>
+            </div>
+            <div class="collapse navbar-collapse" ng-attr-data-toggle="{{headerCtrl.showMenu ? 'collapse' : ''}}" ng-attr-data-target="{{headerCtrl.showMenu?'.navbar-collapse':''}}">
+                <ul class="nav navbar-nav navbar-right header-links">
+                    <li ng-if="!headerCtrl.showLogoutLink">
+                        <a href="#!/login">Login</a>
+                    </li>
+                    <li ng-if="headerCtrl.showLogoutLink">
+                        <a href="javascript:void(0)" ng-click="headerCtrl.logout()">Logout</a>
+                    </li>
+                    <li class="visible-xs" ng-show="showCategoryLink">
+                        <a href="javascript:void(0);" ng-click="showSidebar=!showSidebar">Categories</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

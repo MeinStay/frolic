@@ -1,0 +1,26 @@
+{
+    "name": "frolic",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "./node_modules/webpack/bin/webpack.js -p --progress && node server.js"
+    },
+    "author": "Ankit Mahule",
+    "license": "ISC",
+    "dependencies": {
+        "@uirouter/angularjs": "^1.0.3",
+        "angular": "^1.6.6",
+        "angular-file-upload": "^2.5.0",
+        "angular-sanitize": "^1.6.6",
+        "bootstrap": "^3.3.7",
+        "express": "^4.14.0",
+        "jquery": "^3.2.1",
+        "ng-file-upload": "^12.2.13",
+        "ng-sanitize": "0.0.2",
+        "ng-storage": "^0.3.2",
+        "webpack": "^3.5.5",
+        "webpack-dev-server": "^2.7.1",
+        "webpack-vendor-chunk-plugin": "^1.0.0"
+    }
+}

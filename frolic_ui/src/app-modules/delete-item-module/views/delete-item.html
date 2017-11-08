@@ -1,0 +1,29 @@
+<section class="wrapper">
+    <section class="col-md-6 col-md-offset-3">
+        <div class="alert alert-warning alert-dismissable fade in" ng-if="deleteCtrl.responseCode=='7867'">
+            <i class="close fa fa-times" data-dismiss="alert" aria-label="close"></i>
+            <p>{{deleteCtrl.responseMessage}}. Please try again.</p>
+        </div>
+        <div class="alert alert-danger alert-dismissable fade in" ng-if="deleteCtrl.responseCode=='7864'">
+            <i class="close fa fa-times" data-dismiss="alert" aria-label="close"></i>
+            <p>{{deleteCtrl.responseMessage}}. Please try again.</p>
+        </div>
+        <div ng-if="!deleteCtrl.showForm && deleteCtrl.responseCode=='0000'" class="text-center">
+            <h3 class="mb-20">{{deleteCtrl.responseMessage}}</h3>
+            <a href="#!/" class="btn btn-success">Back to home</a>
+        </div>
+        <div ng-if="deleteCtrl.showForm">
+            <h3 class="text-center mb-20">Delete Items</h3>
+            <hr>
+            <div class="panel panel-default form-panel del-panel">
+                <div class="del-content">
+                    <p>Are you sure you want to delete this item?</p>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success pull-right" ng-click="deleteCtrl.deleteItem(deleteCtrl.itemId)">Yes I Want To !</button>
+                    <button class="btn btn-success pull-left" ng-click="deleteCtrl.goBack()">No Take Me Back !</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>

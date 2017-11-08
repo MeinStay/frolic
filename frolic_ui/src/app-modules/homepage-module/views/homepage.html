@@ -1,0 +1,25 @@
+<ng-include src="'../../sidebar-module/views/sidebar.html'">
+</ng-include>
+<section class="col-md-9 col-sm-8 mt-20 pr-0">
+    <div class="cut-margin">
+        <div class="panel panel-default items-menu">
+            <a href="#!/add_item" class="btn btn-success pull-right">Add Item</a>
+            <p class="view-items-heading">Found {{homePageCtrl.items.length}} Items</p>
+        </div>
+        <div class="panel panel-default items-panel">
+            <div class="empty-container" ng-if="homePageCtrl.items.length <= 0">
+                <i class="fa fa-search no-results" aria-hidden="true"></i>
+                <p class="">We couldn't find the items for this category. Please try some other category or add items under this category.</p>
+            </div>
+            <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 text-center mb-20" ng-repeat="item in homePageCtrl.items">
+                <div class="item-card">
+                    <a href="#!/view_details?q={{item.id}}" class="movie-text" title="{{item.description}}">
+                        <img class="img-responsive" ng-src="{{homePageCtrl.imageUrl}}/{{item.item_photo}}">
+                        <span class="item-name">{{item.title}}</span>
+                        <p class="description">{{item.description}}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

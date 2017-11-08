@@ -1,0 +1,57 @@
+{
+    "categories": [{
+        "id": 1,
+        "name": "Soccer"
+    }, {
+        "id": 2,
+        "name": "Cricket"
+    }],
+    "items": [{
+            "cat_id": 1,
+            "id": 1,
+            "title": "Shoes",
+            "description": "Soccer shoes are the most important component for playing good soccer."
+        },
+        {
+            "cat_id": 1,
+            "id": 2,
+            "title": "Jersey",
+            "description": "Soccer jersey is the most important component for playing good soccer."
+        },
+        {
+            "cat_id": 1,
+            "id": 3,
+            "title": "Football",
+            "description": "Soccer football is the most important component for playing good soccer."
+        },
+        {
+            "cat_id": 4,
+            "id": 1,
+            "title": "Socks",
+            "description": "Soccer socks are the most important component for playing good soccer."
+        }, {
+            "cat_id": 2,
+            "id": 1,
+            "title": "Shoes",
+            "description": "Cricket shoes are the most important component for playing good soccer."
+        },
+        {
+            "cat_id": 2,
+            "id": 2,
+            "title": "Jersey",
+            "description": "Cricket jersey is the most important component for playing good soccer."
+        },
+        {
+            "cat_id": 2,
+            "id": 3,
+            "title": "Bat",
+            "description": "Cricket bat is the most important component for playing good soccer."
+        },
+        {
+            "cat_id": 2,
+            "id": 4,
+            "title": "Ball",
+            "description": "Cricket ball is the most important component for playing good soccer."
+        }
+    ]
+}
